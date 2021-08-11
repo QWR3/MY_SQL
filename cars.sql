@@ -32,3 +32,4 @@ SELECT * FROM april_2021.cars WHERE LENGTH(model) = 8;
 #***найти машины цена которых больше чем цена среднего арифметического всех машин
 SELECT AVG(price) FROM april_2021.cars INTO @avgPrice;
 SELECT @avgPrice,model,price,id,year from april_2021.cars WHERE price>@avgPrice group by id;
+
