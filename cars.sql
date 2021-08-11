@@ -1,5 +1,5 @@
 #найти все машины старше 2000 г
-SELECT * FROM april_2021.cars WHERE year > 2000;	
+SELECT * FROM april_2021.cars WHERE year > 2000;
 #найти все машины младше 2015 г
 SELECT * FROM april_2021.cars WHERE year < 2015;
 #найти все машины 2008, 2009, 2010 годов
@@ -19,7 +19,7 @@ SELECT * FROM april_2021.cars ORDER BY `id` DESC LIMIT 5;
 #найти среднее арифметическое цен машин модели KIA
 SELECT AVG(price) FROM april_2021.cars WHERE model = "KIA";
 #найти среднее арифметическое цен каждой машины
-SELECT AVG(price), model FROM april_2021.cars GROUP BY model; 
+SELECT AVG(price), model FROM april_2021.cars GROUP BY model;
 #посчитать количество каждой марки машин
 SELECT COUNT(model),model FROM april_2021.cars GROUP BY model;
 #найти марку машины количество которых больше всего
@@ -32,4 +32,3 @@ SELECT * FROM april_2021.cars WHERE LENGTH(model) = 8;
 #***найти машины цена которых больше чем цена среднего арифметического всех машин
 SELECT AVG(price) FROM april_2021.cars INTO @avgPrice;
 SELECT @avgPrice,model,price,id,year from april_2021.cars WHERE price>@avgPrice group by id;
-
